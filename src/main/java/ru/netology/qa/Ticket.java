@@ -55,6 +55,6 @@ public class Ticket implements Comparable<Ticket> {
     @Override
     public int compareTo(Ticket other) {
         return this.price - other.price;
-            // отрицательное = this меньше, 0 = равны, положительное = this больше
+        // отрицательное = this меньше, 0 = равны, положительное = this больше
     }
 }

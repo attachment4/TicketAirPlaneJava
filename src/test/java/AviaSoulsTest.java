@@ -36,8 +36,8 @@ public class AviaSoulsTest {
     void searchShouldReturnTicketsSortedByPrice() {
         AviaSouls manager = new AviaSouls();
         Ticket t1 = new Ticket("MOW", "LED", 5000, 10, 12);
-        Ticket t2 = new Ticket("MOW", "LED", 3000, 8,  10);
-        Ticket t3 = new Ticket("MOW", "LED", 7000, 6,  9);
+        Ticket t2 = new Ticket("MOW", "LED", 3000, 8, 10);
+        Ticket t3 = new Ticket("MOW", "LED", 7000, 6, 9);
         manager.add(t1);
         manager.add(t2);
         manager.add(t3);
@@ -72,7 +72,7 @@ public class AviaSoulsTest {
     void comparatorShouldReturnNegativeWhenFirstFaster() {
         TicketTimeComparator comp = new TicketTimeComparator();
         Ticket t1 = new Ticket("MOW", "LED", 5000, 10, 12); // 2 часа
-        Ticket t2 = new Ticket("MOW", "LED", 3000, 8,  12); // 4 часа
+        Ticket t2 = new Ticket("MOW", "LED", 3000, 8, 12); // 4 часа
         assertTrue(comp.compare(t1, t2) < 0);
     }
 
@@ -88,7 +88,7 @@ public class AviaSoulsTest {
     void comparatorShouldReturnZeroWhenSameDuration() {
         TicketTimeComparator comp = new TicketTimeComparator();
         Ticket t1 = new Ticket("MOW", "LED", 5000, 10, 12); // 2 часа
-        Ticket t2 = new Ticket("MOW", "LED", 3000, 8,  10); // 2 часа
+        Ticket t2 = new Ticket("MOW", "LED", 3000, 8, 10); // 2 часа
         assertEquals(0, comp.compare(t1, t2));
     }
 
@@ -98,8 +98,8 @@ public class AviaSoulsTest {
     void searchAndSortByShouldSortByDuration() {
         AviaSouls manager = new AviaSouls();
         Ticket t1 = new Ticket("MOW", "LED", 5000, 10, 12); // 2 часа
-        Ticket t2 = new Ticket("MOW", "LED", 3000, 6,  12); // 6 часов
-        Ticket t3 = new Ticket("MOW", "LED", 7000, 8,  12); // 4 часа
+        Ticket t2 = new Ticket("MOW", "LED", 3000, 6, 12); // 6 часов
+        Ticket t3 = new Ticket("MOW", "LED", 7000, 8, 12); // 4 часа
         manager.add(t1);
         manager.add(t2);
         manager.add(t3);
